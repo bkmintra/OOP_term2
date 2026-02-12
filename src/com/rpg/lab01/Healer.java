@@ -1,8 +1,6 @@
 package com.rpg.lab01;
 
-import java.lang.Character;
-
-public class Healer extends java.lang.Character {
+public class Healer extends Character {
     private int healAmount;
 
     public Healer(String name, int level, int hp, Weapon weapon, int healAmount) {
@@ -38,5 +36,4 @@ public class Healer extends java.lang.Character {
         System.out.println("Restored "+ healAmount+ "HP to "+ target.name+ "! Their HP: "+target.hp);
     }
 }
-
 

@@ -50,3 +50,5 @@ public class Weapon {
         return name+" (Type: "+type+", Damage: "+basedamage+", Ability: " +ability+")";
     }
 }
+
+

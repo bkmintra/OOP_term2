@@ -1,7 +1,5 @@
 package com.rpg.lab01;
 
-import java.lang.Character;
-
 public class RPGGameApp {
     public static void main(String[] args){
         System.out.print("\n"+"=".repeat(70));
@@ -14,8 +12,8 @@ public class RPGGameApp {
         Weapon staffHealer = new Weapon("Healing Staff", "Magic", 15,"Healing");
 
         System.out.print("\n[STEP 2] Creating Charaters...");
-        java.lang.Character warrior = new java.lang.Character("Arthur",10,1500,swordWeapon,"Warrior");
-        java.lang.Character mage = new Character("Merlin",12,800, staffWeapon,"Mage");
+        Character warrior = new Character("Arthur",10,1500,swordWeapon,"Warrior");
+        Character mage = new Character("Merlin",12,800, staffWeapon,"Mage");
         Healer healer = new Healer("Elara",9,1000, staffHealer,30);
 
         System.out.println("\n[STEP 3] Initial Character Status:");
@@ -57,3 +55,4 @@ public class RPGGameApp {
 
     }
 }
+

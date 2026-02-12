@@ -1,13 +1,10 @@
 package com.library.lab01;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Book {
     private String title;
-    private String author;
-    private String isbn;
-    private double price;
-    private String status;
 
     public String getAuthor() {
         return author;
@@ -33,6 +30,14 @@ public class Book {
         this.price = price;
     }
 
+    public LocalDate getReturnDueDate() {
+        return returnDueDate;
+    }
+
+    public void setReturnDueDate(LocalDate returnDueDate) {
+        this.returnDueDate = returnDueDate;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -49,17 +54,12 @@ public class Book {
         this.title = title;
     }
 
+    private String author;
+    private String isbn;
+    private double price;
+    private String status;
     private LocalDate returnDueDate;
 
-
-
-    public LocalDate getReturnDueDate() {
-        return returnDueDate;
-    }
-
-    public void setReturnDueDate(LocalDate returnDueDate) {
-        this.returnDueDate = returnDueDate;
-    }
 
     public Book(String title, String author, String isbn, double price, String status){
         this.title = title;
