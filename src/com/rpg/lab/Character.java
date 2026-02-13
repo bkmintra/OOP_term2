@@ -126,7 +126,7 @@ public class Character {
         this.level++;
         this.maxHp += 10;
         this.hp = this.maxHp;
-        System.out.println(name+ "leveled up to Level"+level+"!");
+        System.out.println(name+ " leveled up to Level"+level+"!");
         System.out.println("Max Health increased to "+ maxHp+" (full heal applied)");
     }
 
