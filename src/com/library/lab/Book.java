@@ -70,7 +70,7 @@ public class Book {
     }
 
     public void displayDetails(){
-        System.out.println("Book[Title = ]'"+ title + "', Status = '"+ status + "']");
+        System.out.println("Book[Title = '"+ title + "', Status = '"+ status + "']");
     }
 
     public void checkOut(Member borrower){
