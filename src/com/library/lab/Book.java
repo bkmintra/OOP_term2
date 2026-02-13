@@ -1,7 +1,7 @@
-package com.library.lab01;
+package com.library.lab;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 public class Book {
     private String title;
@@ -59,7 +59,7 @@ public class Book {
     private double price;
     private String status;
     private LocalDate returnDueDate;
-
+    private Member current;
 
     public Book(String title, String author, String isbn, double price, String status){
         this.title = title;
@@ -70,26 +70,40 @@ public class Book {
     }
 
     public void displayDetails(){
-        System.out.println("- Title : "+ title);
-        System.out.println("- Author : "+ author);
-        System.out.println("- ISBN : "+ isbn);
-        System.out.println("- Price :"+ price);
-        System.out.println("- Status : "+status);
-        System.out.println("- Return Due Date : "+ returnDueDate);
+        System.out.println("Book[Title = ']"+ title + "', Status = '"+ status + "']");
     }
 
-    public void checkOut(){
+    public void checkOut(Member borrower){
         if ("Borrowed".equalsIgnoreCase(this.status)) {
             System.out.println("Error: Book '"+this.title+"' is already borrowed and cannot be checked out again.");
+            return;
+        }
+
+        if (!borrower.canBorrow()){
+            System.out.println("Member "+ borrower.getName()+" has reached the borrow limit (3).");
+            System.out.println("Borrow request denied for member "+borrower.getName()+".");
+            return;
         }
 
         this.status = "Borrowed";
         this.returnDueDate = LocalDate.now().plusDays(14);
+        this.current = borrower;
+
+        borrower.borrowBook();
+
         System.out.println("Book '"+title+"' has been checked out successfully.");
+        System.out.println("Book "+title+" has been borrowed by "+borrower.getName()+".");
         System.out.println("Return Due Date: "+this.returnDueDate);
     }
 
     public void returnBook(){
+        if (this.current != null){
+            this.current.returnBook();
+            this.current = null;
+        }
+
+        this.status = "Available";
+        this.returnDueDate = null;
         System.out.println("Book '"+title+"' has been returned succesfully.");
     }
 }

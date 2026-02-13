@@ -1,9 +1,9 @@
-package com.rpg.lab01;
+package com.rpg.lab;
 
 public class Weapon {
     private String name;
     private String type;
-    private int basedamage;
+    private int damage;
     private String ability;
 
     public String getAbility() {
@@ -14,12 +14,12 @@ public class Weapon {
         this.ability = ability;
     }
 
-    public int getBaseDamage() {
-        return basedamage;
+    public int getDamage() {
+        return damage;
     }
 
-    public void setBaseDamage(int baseDamage) {
-        this.basedamage = baseDamage;
+    public void setDamage(int baseDamage) {
+        this.damage = baseDamage;
     }
 
     public String getName() {
@@ -41,13 +41,13 @@ public class Weapon {
     public Weapon(String name, String type, int baseDamage, String ability){
         this.name = name;
         this.type = type;
-        this.basedamage = baseDamage;
+        this.damage = baseDamage;
         this.ability = ability;
     }
 
     @Override
     public String toString(){
-        return name+" (Type: "+type+", Damage: "+basedamage+", Ability: " +ability+")";
+        return name+" (Type: "+type+", Damage: "+ damage +", Ability: " +ability+")";
     }
 }
 
