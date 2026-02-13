@@ -70,7 +70,7 @@ public class Book {
     }
 
     public void displayDetails(){
-        System.out.println("Book[Title = ']"+ title + "', Status = '"+ status + "']");
+        System.out.println("Book[Title = ]'"+ title + "', Status = '"+ status + "']");
     }
 
     public void checkOut(Member borrower){
@@ -92,7 +92,7 @@ public class Book {
         borrower.borrowBook();
 
         System.out.println("Book '"+title+"' has been checked out successfully.");
-        System.out.println("Book "+title+" has been borrowed by "+borrower.getName()+".");
+        System.out.println("Book '"+title+"' has been borrowed by "+borrower.getName()+".");
         System.out.println("Return Due Date: "+this.returnDueDate);
     }
 
@@ -104,6 +104,6 @@ public class Book {
 
         this.status = "Available";
         this.returnDueDate = null;
-        System.out.println("Book '"+title+"' has been returned succesfully.");
+        System.out.println("Book '"+title+"' has been returned successfully.");
     }
 }
