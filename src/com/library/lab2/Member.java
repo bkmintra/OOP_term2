@@ -1,4 +1,4 @@
-package com.library.lab;
+package com.library.lab2;
 
 public class Member {
     private String memberId;

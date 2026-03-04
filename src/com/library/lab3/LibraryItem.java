@@ -1,10 +1,10 @@
-package com.library.lab;
+package com.library.lab3;
 
 import java.time.LocalDate;
 
 
-public class Book {
-    private String title;
+public abstract class LibraryItem {
+    protected String title;
 
     public String getAuthor() {
         return author;
@@ -54,23 +54,18 @@ public class Book {
         this.title = title;
     }
 
-    private String author;
-    private String isbn;
-    private double price;
-    private String status;
-    private LocalDate returnDueDate;
-    private Member current;
+    protected String author;
+    protected String isbn;
+    protected double price;
+    protected String status;
+    protected LocalDate returnDueDate;
+    protected Member currentBorrower;
 
-    public Book(String title, String author, String isbn, double price, String status){
+    public LibraryItem(String title, String author, String isbn){
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.price = price;
-        this.status = status;
-    }
-
-    public void displayDetails(){
-        System.out.println("Book[Title = '"+ title + "', Status = '"+ status + "']");
+        this.status = "Available";
     }
 
     public void checkOut(Member borrower){
@@ -87,23 +82,29 @@ public class Book {
 
         this.status = "Borrowed";
         this.returnDueDate = LocalDate.now().plusDays(14);
-        this.current = borrower;
+        this.currentBorrower = borrower;
 
-        borrower.borrowBook();
+        borrower.borrowItem();
 
-        System.out.println("Book '"+title+"' has been checked out successfully.");
-        System.out.println("Book '"+title+"' has been borrowed by "+borrower.getName()+".");
+        System.out.println("Item '"+title+"' has been checked out successfully.");
+        System.out.println("Item '"+title+"' has been borrowed by "+borrower.getName()+".");
         System.out.println("Return Due Date: "+this.returnDueDate);
     }
 
-    public void returnBook(){
-        if (this.current != null){
-            this.current.returnBook();
-            this.current = null;
+    public void returnItem(){
+        if (this.currentBorrower != null){
+            this.currentBorrower.returnItem();
+            this.currentBorrower = null;
         }
 
         this.status = "Available";
         this.returnDueDate = null;
-        System.out.println("Book '"+title+"' has been returned successfully.");
+        System.out.println("Item '"+title+"' has been returned successfully.");
+    }
+
+    public abstract void displayDetails();
+
+    public double calculateLateFee(int daysLate){
+        return 0.0;
     }
 }
