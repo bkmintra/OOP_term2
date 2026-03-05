@@ -1,9 +1,12 @@
-package com.rpg.lab;
+package com.rpg.lab3;
 
-public class Healer extends Character {
+import com.rpg.lab2.Character;
+import com.rpg.lab2.Weapon;
+
+public class Healer extends com.rpg.lab2.Character {
     private int healPower;
 
-    public Healer(String name, int level, int hp,int baseDamage,int defense,Weapon weapon, int healPower) {
+    public Healer(String name, int level, int hp, int baseDamage, int defense, Weapon weapon, int healPower) {
         super(name,level, hp, baseDamage, defense, weapon,"Healer");
         this.healPower = healPower;
     }
@@ -34,13 +37,13 @@ public class Healer extends Character {
 
     }
 
-    public void healWarrior(Character target){
-        System.out.println(name+ " ("+ job + ") casts healing spell on " +target.name + "!");
-        int totalHeal = totalHealingPower();
-        System.out.println("Healing Amount: "+ totalHeal);
+//    public void healWarrior(Character target){
+//        System.out.println(name+ " ("+ job + ") casts healing spell on " +target.name + "!");
+//        int totalHeal = totalHealingPower();
+//        System.out.println("Healing Amount: "+ totalHeal);
+//
+//        target.receiveHeal(totalHeal);
 
-        target.receiveHeal(totalHeal);
-
-    }
+ //   }
 }
 

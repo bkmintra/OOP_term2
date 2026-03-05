@@ -1,4 +1,4 @@
-package com.rpg.lab;
+package com.rpg.lab3;
 
 public class Weapon {
     private String name;
@@ -50,5 +50,3 @@ public class Weapon {
         return name+" (Type: "+type+", Damage: "+ damage +", Ability: " +ability+")";
     }
 }
-
-

@@ -1,4 +1,4 @@
-package com.library.lab;
+package com.library.lab2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,16 +22,16 @@ public class LibraryManagementApp {
             book.displayDetails();
         }
 
-        System.out.println("\n--- Testing checkOut() Medthod ---");
+        System.out.println("\n--- Testing checkOut() Method ---");
 
-        System.out.println("\nAttemping to checkout Book 1 and Book 2 (Available):");
+        System.out.println("\nAttempting to checkout Book 1 and Book 2 (Available):");
         books.get(0).checkOut(member1);
         books.get(1).checkOut(member1);
 
-        System.out.println("\nAttemping to checkout Book 2 again (Already Borrewed):");
+        System.out.println("\nAttempting to checkout Book 2 again (Already Borrowed):");
         books.get(1).checkOut(member1);
 
-        System.out.println("\n--- Testing returnBook() Medthod ---");
+        System.out.println("\n--- Testing returnBook() Method ---");
         System.out.println("\nReturning Book 1:");
         books.get(0).returnBook();
 

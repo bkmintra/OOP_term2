@@ -1,4 +1,4 @@
-package com.rpg.lab;
+package com.rpg.lab2;
 
 public class RPGGameApp {
     public static void main(String[] args){
@@ -12,8 +12,8 @@ public class RPGGameApp {
         Weapon staffHealer = new Weapon("Healing Staff", "Magic", 15,"Healing");
 
         System.out.print("\n[STEP 2] Creating Characters...");
-        Character warrior = new Character("Arthur",10,1500,20,10, swordWeapon,"Warrior");
-        Character mage = new Character("Merlin",12,800,15,5, staffWeapon,"Mage");
+        com.rpg.lab2.Character warrior = new com.rpg.lab2.Character("Arthur",10,1500,20,10, swordWeapon,"Warrior");
+        com.rpg.lab2.Character mage = new Character("Merlin",12,800,15,5, staffWeapon,"Mage");
         Healer healer = new Healer("Elara",9,1000,10,8, staffHealer,30);
 
         System.out.println("\n[STEP 3] Initial Character Status:");
