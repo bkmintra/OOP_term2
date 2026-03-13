@@ -30,7 +30,7 @@ public class PhysicalBook extends LibraryItem implements Taxable {
 
     @Override
     public void printSummary(){
-        System.out.println("PhysicalBook[ Title = ' "+title+" ', Location = '"+shelfLocation+" ', Status ="+ status +"'']");
+        System.out.println("PhysicalBook[ Title = ' "+title+" ', Location = '"+shelfLocation+" ', Status ="+ status +"']");
     }
 
     @Override

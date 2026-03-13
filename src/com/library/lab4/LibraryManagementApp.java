@@ -74,6 +74,7 @@ public class LibraryManagementApp {
         System.out.println("\n"+"=".repeat(60));
         System.out.println("INTERFACE IMPLEMENTATION: DIGITAL CONTENT & TAXABLE DEMO");
         System.out.println("\n"+"=".repeat(60));
+        System.out.println();
         System.out.println("--- DIGITAL CONTENT INTERFACE ---");
         System.out.println("Processing Digital Content for EBooks (DigitalContent interface): ");
         System.out.println("Note: Only EBook implement DigitalContent, PhysicalBook do NOT.\n");
@@ -84,6 +85,7 @@ public class LibraryManagementApp {
                 launchStreamingPlayer(digitalBook);
             }
         }
+        System.out.println();
 
         System.out.println("--- TAXABLE INTERFACE ---");
         System.out.println("Processing Tax Calculation (Taxable interface): ");
