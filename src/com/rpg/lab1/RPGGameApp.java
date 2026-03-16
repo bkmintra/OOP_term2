@@ -1,6 +1,6 @@
 package com.rpg.lab1;
 
-public class RPGGameApp {
+public class weRPGGameApp {
     public static void main(String[] args){
         System.out.print("\n"+"=".repeat(70));
         System.out.println("   SCENARIO 2: RPG GAME CHARACTER - DEMONSTRATION");
