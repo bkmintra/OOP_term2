@@ -1,5 +1,7 @@
 package com.rpg.lab1;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Healer extends Character {
     private int healAmount;
 
