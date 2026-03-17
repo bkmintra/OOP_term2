@@ -62,3 +62,4 @@ public class Character implements Destructible {
         System.out.println("--- " + name.toUpperCase() + " (" + job.toUpperCase() + ") --- HP: " + hp + "/" + maxHp);
     }
 }
+//

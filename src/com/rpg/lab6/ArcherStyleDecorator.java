@@ -36,4 +36,5 @@ public class ArcherStyleDecorator extends AttackDecorator{
             archer.setDamage(originalDamage);
         }
     }
+    //
 }

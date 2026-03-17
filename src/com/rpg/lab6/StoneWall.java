@@ -71,3 +71,4 @@ public class StoneWall implements Destructible{
         System.out.println("Durability: "+durability+"/"+maxDurability);
     }
 }
+//

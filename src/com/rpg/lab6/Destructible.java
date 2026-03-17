@@ -4,3 +4,4 @@ public interface Destructible {
     void takeDamage (int amount);
     boolean isDestroyed();
 }
+//

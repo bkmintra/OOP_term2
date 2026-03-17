@@ -13,7 +13,8 @@ public class Weapon {
         this.ability = ability;
     }
     public String getName() { return name; }
-    public int getBaseDamage() { return baseDamage; } // ใช้ getBaseDamage ตามโจทย์
+    public int getBaseDamage() { return baseDamage; }
     @Override
     public String toString() { return name + " (Type: " + type + ", Damage: " + baseDamage + ")"; }
 }
+//

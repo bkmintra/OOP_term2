@@ -81,3 +81,4 @@ public class CastleGate implements Destructible{
         System.out.println("Reinforced: "+(reinfored?"Yes":"No"));
     }
 }
+//
