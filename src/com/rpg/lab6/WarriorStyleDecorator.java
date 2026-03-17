@@ -22,3 +22,4 @@ public class WarriorStyleDecorator extends AttackDecorator{
         }
     }
 }
+//

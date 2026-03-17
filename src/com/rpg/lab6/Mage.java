@@ -16,3 +16,4 @@ public class Mage extends Character{
     public void setMana(int mana) { this.mana = mana; }
     public int getMaxMana() { return maxMana; }
 }
+//

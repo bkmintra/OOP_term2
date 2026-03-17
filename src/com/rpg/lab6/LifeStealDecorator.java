@@ -27,3 +27,4 @@ public class LifeStealDecorator extends AttackDecorator{
         System.out.println("   [Decorator] Life Steal restored " + restored + " HP to " + attacker.getName() + " (" + hpBefore + " -> " + attacker.getHealthPoints() + ")");
     }
 }
+//

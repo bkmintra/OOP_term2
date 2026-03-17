@@ -21,3 +21,4 @@ public class DamageBoostDecorator extends AttackDecorator{
         }
     }
 }
+//

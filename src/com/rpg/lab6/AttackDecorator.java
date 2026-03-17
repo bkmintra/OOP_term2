@@ -10,3 +10,4 @@ public abstract class AttackDecorator implements Attack{
         this.wrappedAttack = wrappedAttack;
     }
 }
+//

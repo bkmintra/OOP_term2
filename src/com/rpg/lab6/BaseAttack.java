@@ -12,3 +12,4 @@ public class BaseAttack implements Attack{
         target.takeDamage(totalDamage);
     }
 }
+//

@@ -1,5 +1,7 @@
 package com.rpg.lab1;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Healer extends Character {
     private int healAmount;
 
@@ -23,6 +25,9 @@ public class Healer extends Character {
         int healAmount = totalHealingPower();
         int levelBonus = level * 3;
         System.out.println("Healing Amount: "+healAmount+" (Base: "+healAmount+" + Level Bonnus: "+levelBonus+")");
+        // 3. แทนที่จะใช้ this.newHeal() (ที่อาจจะไม่มีอยู่จริง)
+        // เราสามารถเขียนบวกเลือด (hp) เข้าไปตรงๆ ได้เลยครับ
+        //this.hp += totalHeal;
         this.newHeal(healAmount);
         System.out.println("Restored "+healAmount+" HP! Current HP: "+hp+"/"+maxHp);
     }
